@@ -1,3 +1,5 @@
 /iSpindel/*.b#1
 firmware.bin
 iSpindel-5.6.1/
+*.s#1
+*.pro
