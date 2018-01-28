@@ -3,3 +3,8 @@ firmware.bin
 iSpindel-5.6.1/
 *.s#1
 *.pro
+iSpindel/deska.b##
+iSpindel/deska.b#2
+iSpindel/deska.s##
+iSpindel/deska.s#2
+*.lck
