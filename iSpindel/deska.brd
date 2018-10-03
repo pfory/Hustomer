@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.7.0">
+<eagle version="9.1.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="25" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="984.251969" altunitdist="mil" altunit="mil"/>
@@ -1511,10 +1512,14 @@ design rules under a new name.</description>
 <param name="slThermalsForVias" value="0"/>
 <param name="dpMaxLengthDifference" value="10mm"/>
 <param name="dpGapFactor" value="2.5"/>
-<param name="checkGrid" value="0"/>
 <param name="checkAngle" value="0"/>
 <param name="checkFont" value="1"/>
 <param name="checkRestrict" value="1"/>
+<param name="checkStop" value="0"/>
+<param name="checkValues" value="0"/>
+<param name="checkNames" value="1"/>
+<param name="checkWireStubs" value="1"/>
+<param name="checkPolygonWidth" value="0"/>
 <param name="useDiameter" value="13"/>
 <param name="maxErrors" value="50"/>
 </designrules>
@@ -1634,10 +1639,10 @@ design rules under a new name.</description>
 <element name="IN+2" library="pinhead" package="1X01" value="" x="38.1" y="14.605"/>
 <element name="IN+3" library="pinhead" package="1X01" value="" x="38.1" y="12.065"/>
 <element name="SL1" library="con-amp-quick" package="05P" value="" x="22.225" y="13.335" rot="R180">
-<attribute name="MPN" value="" x="22.225" y="13.335" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="OC_NEWARK" value="unknown" x="22.225" y="13.335" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="OC_FARNELL" value="unknown" x="22.225" y="13.335" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MF" value="" x="22.225" y="13.335" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="" x="22.225" y="13.335" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="22.225" y="13.335" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_NEWARK" value="unknown" x="22.225" y="13.335" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="IN+4" library="pinhead" package="1X01" value="" x="38.1" y="24.765"/>
 <element name="IN+5" library="pinhead" package="1X01" value="" x="38.1" y="22.225"/>
@@ -1649,14 +1654,9 @@ design rules under a new name.</description>
 <contactref element="R2" pad="1"/>
 <contactref element="R1" pad="2"/>
 <wire x1="12.7" y1="30.48" x2="12.7" y2="29.21" width="0.6096" layer="16"/>
-<wire x1="12.7" y1="29.21" x2="15.24" y2="26.67" width="0.6096" layer="16"/>
-<wire x1="15.24" y1="26.67" x2="16.47" y2="26.67" width="0.6096" layer="16"/>
-<wire x1="16.47" y1="26.67" x2="16.51" y2="26.63" width="0.6096" layer="1"/>
-<wire x1="3.81" y1="21.59" x2="5.08" y2="21.59" width="0.6096" layer="1"/>
 <wire x1="12.7" y1="29.21" x2="6.35" y2="29.21" width="0.6096" layer="16"/>
 <wire x1="6.35" y1="29.21" x2="3.81" y2="26.67" width="0.6096" layer="16"/>
 <wire x1="3.81" y1="26.67" x2="3.81" y2="21.59" width="0.6096" layer="16"/>
-<via x="16.47" y="26.67" extent="1-16" drill="0.6" shape="square"/>
 <contactref element="SL1" pad="5"/>
 <wire x1="15.24" y1="19.05" x2="16.51" y2="19.05" width="0.6096" layer="16"/>
 <wire x1="16.51" y1="19.05" x2="17.145" y2="19.05" width="0.6096" layer="16"/>
@@ -1671,6 +1671,9 @@ design rules under a new name.</description>
 <wire x1="29.21" y1="17.145" x2="27.305" y2="19.05" width="0.6096" layer="16"/>
 <wire x1="27.305" y1="19.05" x2="17.145" y2="19.05" width="0.6096" layer="16"/>
 <wire x1="29.21" y1="12.7" x2="30.48" y2="11.43" width="0.6096" layer="16"/>
+<wire x1="16.51" y1="26.63" x2="16.47" y2="26.67" width="0.6096" layer="16"/>
+<wire x1="16.47" y1="26.67" x2="15.24" y2="26.67" width="0.6096" layer="16"/>
+<wire x1="15.24" y1="26.67" x2="12.7" y2="29.21" width="0.6096" layer="16"/>
 </signal>
 <signal name="GND">
 <contactref element="JP1" pad="2"/>
@@ -1757,6 +1760,13 @@ design rules under a new name.</description>
 <wire x1="38.1" y1="14.605" x2="44.45" y2="14.605" width="0.6096" layer="16"/>
 </signal>
 </signals>
+<mfgpreviewcolors>
+<mfgpreviewcolor name="soldermaskcolor" color="0xC8008000"/>
+<mfgpreviewcolor name="silkscreencolor" color="0xFFFEFEFE"/>
+<mfgpreviewcolor name="backgroundcolor" color="0xFF282828"/>
+<mfgpreviewcolor name="coppercolor" color="0xFFFFBF00"/>
+<mfgpreviewcolor name="substratecolor" color="0xFF786E46"/>
+</mfgpreviewcolors>
 </board>
 </drawing>
 </eagle>
